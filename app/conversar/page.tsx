@@ -153,18 +153,20 @@ function Conversar() {
               const reg = q && q.tipo !== "desconocido";
               return (
                 <button key={x.id} role="radio" aria-checked={perfil === x.id} className={`identidad ${perfil === x.id ? "on" : ""}`} onClick={() => setPerfil(x.id)}>
-                  {x.foto ? (
-                    <Avatar src={x.foto} alt={x.titulo} size={44} />
-                  ) : (
-                    <span className="ident-ic" style={{ background: x.id === "tomas" ? "var(--info-soft)" : "var(--err-soft)", color: x.id === "tomas" ? "var(--info)" : "var(--err)" }}>
-                      {x.id === "tomas" ? <GraduationCap size={20} /> : <Lock size={19} />}
-                    </span>
-                  )}
-                  <span style={{ minWidth: 0, flex: 1 }}>
+                  <span className="ident-top">
+                    {x.foto ? (
+                      <Avatar src={x.foto} alt={x.titulo} size={38} />
+                    ) : (
+                      <span className="ident-ic" style={{ background: x.id === "tomas" ? "var(--info-soft)" : "var(--err-soft)", color: x.id === "tomas" ? "var(--info)" : "var(--err)" }}>
+                        {x.id === "tomas" ? <GraduationCap size={18} /> : <Lock size={17} />}
+                      </span>
+                    )}
+                    {listo && <Badge tono={reg ? "ok" : "error"}>{reg ? "Registrado" : "Sin registro"}</Badge>}
+                  </span>
+                  <span style={{ minWidth: 0 }}>
                     <strong>{x.titulo}</strong>
                     <small>{listo ? descripcion(x.id) : "Cargando"}</small>
                   </span>
-                  {listo && <Badge tono={reg ? "ok" : "error"}>{reg ? "Registrado" : "Sin registro"}</Badge>}
                 </button>
               );
             })}

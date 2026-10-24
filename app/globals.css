@@ -1310,14 +1310,15 @@ button.chip:hover {
   align-items: start;
 }
 .identidades {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 10px;
 }
 .identidad {
   display: flex;
-  gap: 12px;
-  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+  align-items: stretch;
   width: 100%;
   padding: 12px;
   border-radius: 14px;
@@ -1340,13 +1341,22 @@ button.chip:hover {
   font-size: 14.5px;
 }
 .identidad small {
+  display: block;
   color: var(--muted);
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 600;
+  line-height: 1.35;
+  margin-top: 2px;
+}
+.ident-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
 }
 .ident-ic {
-  width: 44px;
-  height: 44px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -1367,7 +1377,7 @@ button.chip:hover {
   background: #efe9df;
   display: flex;
   flex-direction: column;
-  height: 600px;
+  height: clamp(480px, calc(100vh - 290px), 600px);
 }
 .tel-head {
   display: flex;
