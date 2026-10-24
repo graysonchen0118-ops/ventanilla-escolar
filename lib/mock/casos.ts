@@ -59,8 +59,8 @@ const SIN_RESPUESTA = [
   "Venden el uniforme usado en algún lado?",
 ];
 
-export const TEXTO_HANDOFF = `Esa consulta es sobre su hijo o hija, y lo de cada estudiante lo responde una persona del colegio. Ya le pasé a la secretaría un resumen con su pregunta. Le escriben por aquí mismo, ${COLEGIO.atencion}.`;
-export const TEXTO_SIN_RESPUESTA = `No encuentro eso en los documentos del colegio, y prefiero no adivinar. Ya le pasé su pregunta a la secretaría, que le responde ${COLEGIO.atencion}.`;
+export const TEXTO_HANDOFF = `Esa consulta es sobre su hijo o hija, y lo de cada estudiante lo responde una persona del colegio. Ya le pasé a la secretaría un resumen con su pregunta. La secretaría atiende ${COLEGIO.atencion}, y le escribe por aquí mismo.`;
+export const TEXTO_SIN_RESPUESTA = `No encuentro eso en los documentos del colegio, y prefiero no adivinar. Ya le pasé su pregunta a la secretaría, que atiende ${COLEGIO.atencion} y le responde por aquí mismo.`;
 
 // Más mensajes de noche: así escriben las familias cuando por fin se sientan.
 export const PESO_HORA = [0.3, 0.2, 0.1, 0.1, 0.2, 0.6, 2.4, 3, 1.6, 1.4, 1.3, 1.4, 2, 1.9, 1.6, 1.7, 1.8, 2.3, 2.6, 4, 5.2, 4.9, 3, 1.2];
